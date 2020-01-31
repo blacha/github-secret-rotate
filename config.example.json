@@ -1,21 +1,16 @@
 {
     "profiles": {
-        "project-dev": {
-            "user": "ci",
+        "default": {
+            "user": "ci-github",
             "maxAge": 24
         }
     },
     "repositories": {
-        "blacha/project": [
+        "blacha/github-secret-rotate": [
             {
-                "profile": "project-dev",
+                "profile": "default",
                 "accessKey": "ST_ACCESS_KEY",
                 "secretAccessKey": "ST_SECRET_ACCESS_KEY"
-            },
-            {
-                "profile": "project-prod",
-                "accessKey": "ST_ACCESS_KEY_PROD",
-                "secretAccessKey": "ST_SECRET_ACCESS_KEY_PROD"
             }
         ]
     }
