@@ -32,7 +32,7 @@
     "author": "Blayne Chard <blayne@chard.com>",
     "license": "MIT",
     "files": [
-        "github-secrets-rotate",
+        "github-secret-rotate",
         "build"
     ]
 }
