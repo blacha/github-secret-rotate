@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "Rotate secret access keys",
     "scripts": {
-        "clean": "tsc --clean",
+        "clean": "rm -r build",
         "build": "tsc --pretty",
         "lint": "eslint 'src/**/*.ts' --fix",
         "test": "ospec src/**/*.test.js"
