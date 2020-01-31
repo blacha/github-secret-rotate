@@ -25,18 +25,21 @@ export class ActionRotate extends CommandLineAction {
             throw new Error('Missing configuration');
         }
         if (!existsSync(this.config.value)) {
-            throw new Error('Configuration file is missing');
+            throw new Error('Configuration: file does not exist');
         }
+
         const config = AccessConfig.load(readFileSync(this.config.value));
 
         let profileNames = [];
         if (this.profile?.value) {
+            // Only rotate one AWS profile
             const profile = config.profiles[this.profile.value];
             if (profile == null) {
                 throw new Error(`Configuration: profile "${this.profile.value}" not found`);
             }
             profileNames.push(this.profile.value);
         } else {
+            // Rotate all profiles
             profileNames = Object.keys(config.profiles);
         }
 
@@ -46,7 +49,7 @@ export class ActionRotate extends CommandLineAction {
             const childLogger = Logger.child({ profile: profileName, user: profile.user });
 
             if (profile.user == null) {
-                childLogger.error('Profile: is missing user');
+                childLogger.error('Profile: Missing user');
                 continue;
             }
 
@@ -60,6 +63,7 @@ export class ActionRotate extends CommandLineAction {
             if (accessKeyInfo == null) {
                 childLogger.info({ profile: profileName }, 'NoAccessKeys');
             } else {
+                // Check if the access key is still valid or does it need to be rotated
                 const dateDiff = Date.now() - accessKeyInfo.date.getTime();
                 if (dateDiff < profile.maxAge * ONE_HOUR && this.force?.value != true) {
                     childLogger.info(
@@ -68,6 +72,7 @@ export class ActionRotate extends CommandLineAction {
                     );
                     continue;
                 }
+                // Forced rotation, even though its still "valid"
                 if (dateDiff < profile.maxAge * ONE_HOUR && this.force?.value != true) {
                     childLogger.debug({ dateDiff }, 'ForcedRotation');
                 }
@@ -95,8 +100,8 @@ export class ActionRotate extends CommandLineAction {
                     // Validate access to the repo
                     await getPublicKey(repo.repoName, childLogger);
 
+                    // Create and set the new credentials
                     const newAccessKey = await rotator.newKey(childLogger);
-
                     await setSecret(repo.repoName, repo.accessKey, newAccessKey?.id, childLogger);
                     await setSecret(repo.repoName, repo.secretAccessKey, newAccessKey?.secret, childLogger);
                 }

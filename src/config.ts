@@ -33,6 +33,11 @@ export class AccessConfig {
         this.repositories = config.repositories;
     }
 
+    /**
+     * Find all github repositories which use this profile
+     *
+     * @param profile Config profile name to lookup
+     */
     getRepositories(profile: string): AccessKeyConfigUpdate[] {
         const output: AccessKeyConfigUpdate[] = [];
         for (const [repo, config] of Object.entries(this.repositories)) {
@@ -45,6 +50,7 @@ export class AccessConfig {
         return output;
     }
 
+    /** Load a config file from a buffer while doing some basic validity checks */
     static load(config: Buffer) {
         const obj = JSON.parse(config.toString());
 

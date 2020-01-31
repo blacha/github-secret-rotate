@@ -10,6 +10,7 @@ if (GITHUB_TOKEN == null || GITHUB_TOKEN == '') {
     process.exit(1);
 }
 
+/** Simple wrapper around fetch to inject github auth */
 async function request<T>(
     method: 'put' | 'post' | 'get',
     url: string,
@@ -41,13 +42,21 @@ async function request<T>(
     return await res.json();
 }
 
-const Secrets: Map<string, GithubSecretsPublicKey> = new Map();
+const PublicKeys: Map<string, GithubSecretsPublicKey> = new Map();
+/**
+ * Get github action secret's public key.
+ *
+ * This is cached for the entire run of the application
+ *
+ * @param repo repository name eg blacha/github-secret-rotate
+ * @param log
+ */
 export async function getPublicKey(repo: string, log: typeof Logger): Promise<GithubSecretsPublicKey> {
-    if (Secrets.has(repo)) {
-        return Secrets.get(repo) as GithubSecretsPublicKey;
+    if (PublicKeys.has(repo)) {
+        return PublicKeys.get(repo) as GithubSecretsPublicKey;
     }
     const publicKey = await request<GithubSecretsPublicKey>('get', `/repos/${repo}/actions/secrets/public-key`, log);
-    Secrets.set(repo, publicKey);
+    PublicKeys.set(repo, publicKey);
     return publicKey;
 }
 
@@ -56,6 +65,14 @@ export interface GithubSecretsPublicKey {
     key: string;
 }
 
+/**
+ * Set a github action secret
+ *
+ * @param repo repository name eg blacha/github-secret-rotate
+ * @param secret name of the secret to set
+ * @param value value of the secret
+ * @param log logger to use
+ */
 export async function setSecret(repo: string, secret: string, value: string, log: typeof Logger) {
     const publicKey = await getPublicKey(repo, log);
     const messageBytes = Buffer.from(value);
