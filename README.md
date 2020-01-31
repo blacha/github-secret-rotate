@@ -9,10 +9,20 @@ This script is designed to rotate secret access keys inside github actions secre
 ## Install
 
 ```bash
-npm i -g github-secrets-rotate
+npm i -g github-secret-rotate
 
-github-secrets-rotate rotate --config config.json --profile project --commit
+export GITHUB_TOKEN=abc123
+
+github-secret-rotate rotate --config config.json --profile project --commit
 ```
+
+## Github token
+
+A personal access token is required it is supplied via the environment variable `GITHUB_TOKEN`
+
+This token needs access to the `repo` scope.
+
+https://developer.github.com/v3/actions/secrets/
 
 ## Configuration
 
