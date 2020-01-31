@@ -108,7 +108,7 @@ export class ActionRotate extends CommandLineAction {
                     rotator.remove(accessKeyInfo.id, childLogger);
                 }
             }
-            if (this.commit?.value == null) {
+            if (this.commit?.value != true) {
                 childLogger.warn('DryRun Done, use --commit to rotate');
             }
         }
