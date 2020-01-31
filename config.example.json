@@ -1,0 +1,22 @@
+{
+    "profiles": {
+        "project-dev": {
+            "user": "ci",
+            "maxAge": 24
+        }
+    },
+    "repositories": {
+        "blacha/project": [
+            {
+                "profile": "project-dev",
+                "accessKey": "ST_ACCESS_KEY",
+                "secretAccessKey": "ST_SECRET_ACCESS_KEY"
+            },
+            {
+                "profile": "project-prod",
+                "accessKey": "ST_ACCESS_KEY_PROD",
+                "secretAccessKey": "ST_SECRET_ACCESS_KEY_PROD"
+            }
+        ]
+    }
+}

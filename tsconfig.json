@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "outDir": "./build",
+        "target": "ES2018",
+        "module": "commonjs",
+        "lib": [],
+        "declaration": true,
+        "declarationMap": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": false,
+        "sourceMap": true,
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "noEmitOnError": false,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "resolveJsonModule": true,
+    },
+    "include": ["src"]
+}

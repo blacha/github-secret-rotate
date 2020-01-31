@@ -1,0 +1,38 @@
+{
+    "name": "github-secret-rotate",
+    "version": "0.0.1",
+    "description": "Rotate secret access keys",
+    "scripts": {
+        "clean": "tsc --clean",
+        "build": "tsc --pretty",
+        "lint": "eslint 'src/**/*.ts' --fix",
+        "test": "ospec src/**/*.test.js"
+    },
+    "bin": "./github-secret-rotate",
+    "dependencies": {
+        "@microsoft/ts-command-line": "^4.3.10",
+        "@types/node": "^13.5.3",
+        "aws-sdk": "^2.610.0",
+        "node-fetch": "^2.6.0",
+        "pino": "^5.16.0",
+        "pretty-json-log": "^0.2.2",
+        "tweetsodium": "^0.0.4"
+    },
+    "devDependencies": {
+        "@types/node-fetch": "^2.5.4",
+        "@types/pino": "^5.15.4",
+        "@typescript-eslint/eslint-plugin": "^2.18.0",
+        "@typescript-eslint/parser": "^2.18.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "prettier": "^1.19.1",
+        "typescript": "^3.7.5"
+    },
+    "author": "Blayne Chard <blayne@chard.com>",
+    "license": "MIT",
+    "files": [
+        "github-secrets-rotate",
+        "build"
+    ]
+}
