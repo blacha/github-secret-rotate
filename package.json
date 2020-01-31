@@ -1,6 +1,6 @@
 {
     "name": "github-secret-rotate",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Rotate secret access keys",
     "scripts": {
         "clean": "rm -r build",
