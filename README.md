@@ -1,5 +1,7 @@
 # Rotate AWS Github actions secret Keys
 
+[![Build Status](https://github.com/blacha/github-secret-rotate/workflows/Main/badge.svg)](https://github.com/blacha/github-secret-rotate/actions)
+
 This script is designed to rotate secret access keys inside github actions secrets
 
 1. Create new AWS access key,
@@ -32,14 +34,16 @@ Everything is configured inside the config json file.
 {
     // Profiles to use
     "profiles": {
-        // AWS Profile name, must exit inside the ~/.aws/config
+        // AWS Profile name, must exist inside the ~/.aws/credentials
         "project-dev": {
-            // IAM User to use to replace keys
+            // IAM User to use for access keys
             "user": "ci"
+            // Number of hours that a token is allowed to be alive
+            "maxAge": 200
         },
+        // Production example
         "project-prod": {
             "user": "ci",
-            // Number of hours that a token is allowed to be alive
             "maxAge": 24
         }
     },
@@ -47,9 +51,9 @@ Everything is configured inside the config json file.
         /** Github repository */
         "blacha/project": [
             {
-                // Profile to use
+                // Configuration profile to use
                 "profile": "project-dev",
-                // Github secrets names to use for access keys
+                // Github secret names to use for access keys
                 "accessKey": "ST_ACCESS_KEY",
                 "secretAccessKey": "ST_SECRET_ACCESS_KEY"
             },
