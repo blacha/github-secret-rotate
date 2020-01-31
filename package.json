@@ -8,7 +8,9 @@
         "lint": "eslint 'src/**/*.ts' --fix",
         "test": "ospec src/**/*.test.js"
     },
-    "bin": "./github-secret-rotate",
+    "bin": {
+        "github-secret-rotate": "./build/index.js"
+    },
     "dependencies": {
         "@microsoft/ts-command-line": "^4.3.10",
         "@types/node": "^13.5.3",
@@ -32,7 +34,6 @@
     "author": "Blayne Chard <blayne@chard.com>",
     "license": "MIT",
     "files": [
-        "github-secret-rotate",
         "build"
     ]
 }
