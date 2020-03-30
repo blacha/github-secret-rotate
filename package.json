@@ -16,7 +16,7 @@
         "@types/node": "^13.5.3",
         "aws-sdk": "^2.610.0",
         "node-fetch": "^2.6.0",
-        "pino": "^5.16.0",
+        "pino": "^6.0.0",
         "pretty-json-log": "^0.2.2",
         "tweetsodium": "^0.0.4"
     },
