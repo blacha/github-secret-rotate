@@ -1211,10 +1211,10 @@ tweetnacl@^1.0.1:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.2.tgz#39fba8d1f7a34706a3fc1fd8c04afcad7bb9e689"
   integrity sha512-+8aPRjmXgf1VqvyxSlBUzKzeYqVS9Ai8vZ28g+mL7dNQl1jlUTCMDZnvNQdAS1xTywMkIXwJsfipsR/6s2+syw==
 
-tweetsodium@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/tweetsodium/-/tweetsodium-0.0.4.tgz#68debb454b496cbe3063099a81cdaa19950a20b5"
-  integrity sha512-nTYzcaSmpd2vcfI8DriuO01l+jIF8TmjNxjFPRyJkdzi5IdJbUstT3G1rk8V9YkzrucNSWoSrA9Z5Yp3RW2cgw==
+tweetsodium@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/tweetsodium/-/tweetsodium-0.0.5.tgz#f63ab4b1d26d6355d82d512a2bbf03cae96eb3e8"
+  integrity sha512-T3aXZtx7KqQbutTtBfn+P5By3HdBuB1eCoGviIrRJV2sXeToxv2X2cv5RvYqgG26PSnN5m3fYixds22Gkfd11w==
   dependencies:
     blakejs "^1.1.0"
     tweetnacl "^1.0.1"
