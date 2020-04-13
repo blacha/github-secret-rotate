@@ -18,7 +18,7 @@
         "node-fetch": "^2.6.0",
         "pino": "^6.0.0",
         "pretty-json-log": "^0.2.2",
-        "tweetsodium": "^0.0.4"
+        "tweetsodium": "^0.0.5"
     },
     "devDependencies": {
         "@types/node-fetch": "^2.5.4",
