@@ -12,7 +12,7 @@
         "github-secret-rotate": "./build/index.js"
     },
     "dependencies": {
-        "@microsoft/ts-command-line": "^4.3.10",
+        "@microsoft/ts-command-line": "^5.0.1",
         "@types/node": "^13.5.3",
         "aws-sdk": "^2.610.0",
         "node-fetch": "^2.6.0",
