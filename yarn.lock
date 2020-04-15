@@ -65,10 +65,10 @@
   resolved "https://registry.yarnpkg.com/@types/pino-std-serializers/-/pino-std-serializers-2.4.0.tgz#8cad99175cb79c2448f7455a2d32fb3fde29579c"
   integrity sha512-eAdu+NW1IkCdmp85SnhyKha+OOREQMT9lXaoICQxa7bhSauRiLzu3WSNt9Mf2piuJvWeXF/G0hGWHr63xNpIRA==
 
-"@types/pino@^5.15.4":
-  version "5.17.0"
-  resolved "https://registry.yarnpkg.com/@types/pino/-/pino-5.17.0.tgz#850cd1d7c5a0e123f022badc2e2bb42d8d0efd9d"
-  integrity sha512-L5DBGFBRY4DKc7ufjZqV4J61ji9FSn4zKvQ5CUBbWi0gE0uOSNwDBpj1t7VwRwdmrpG3QlFxAeXgpViGUOS5Bg==
+"@types/pino@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@types/pino/-/pino-6.0.0.tgz#9c255a87e127b34a368e9f8498ed25943040b809"
+  integrity sha512-V/ygB0a3bkuNMT+MgRd5wahC3dwgEtWyZG7eY2c9gJZZFoZbIQj8vo/h9h8A+iWJfXpzvm97XtydYvKuW2kt1Q==
   dependencies:
     "@types/node" "*"
     "@types/pino-std-serializers" "*"
@@ -91,16 +91,6 @@
     regexpp "^3.0.0"
     tsutils "^3.17.1"
 
-"@typescript-eslint/experimental-utils@2.27.0":
-  version "2.27.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.27.0.tgz#801a952c10b58e486c9a0b36cf21e2aab1e9e01a"
-  integrity sha512-vOsYzjwJlY6E0NJRXPTeCGqjv5OHgRU1kzxHKWJVPjDYGbPgLudBXjIlc+OD1hDBZ4l1DLbOc5VjofKahsu9Jw==
-  dependencies:
-    "@types/json-schema" "^7.0.3"
-    "@typescript-eslint/typescript-estree" "2.27.0"
-    eslint-scope "^5.0.0"
-    eslint-utils "^2.0.0"
-
 "@typescript-eslint/experimental-utils@2.28.0":
   version "2.28.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.28.0.tgz#1fd0961cd8ef6522687b4c562647da6e71f8833d"
@@ -120,19 +110,6 @@
     "@typescript-eslint/experimental-utils" "2.28.0"
     "@typescript-eslint/typescript-estree" "2.28.0"
     eslint-visitor-keys "^1.1.0"
-
-"@typescript-eslint/typescript-estree@2.27.0":
-  version "2.27.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-2.27.0.tgz#a288e54605412da8b81f1660b56c8b2e42966ce8"
-  integrity sha512-t2miCCJIb/FU8yArjAvxllxbTiyNqaXJag7UOpB5DVoM3+xnjeOngtqlJkLRnMtzaRcJhe3CIR9RmL40omubhg==
-  dependencies:
-    debug "^4.1.1"
-    eslint-visitor-keys "^1.1.0"
-    glob "^7.1.6"
-    is-glob "^4.0.1"
-    lodash "^4.17.15"
-    semver "^6.3.0"
-    tsutils "^3.17.1"
 
 "@typescript-eslint/typescript-estree@2.28.0":
   version "2.28.0"
