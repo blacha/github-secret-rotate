@@ -17,7 +17,7 @@
         "aws-sdk": "^2.610.0",
         "node-fetch": "^2.6.0",
         "pino": "^6.0.0",
-        "pretty-json-log": "^0.2.2",
+        "pretty-json-log": "^0.3.1",
         "tweetsodium": "^0.0.5"
     },
     "devDependencies": {
