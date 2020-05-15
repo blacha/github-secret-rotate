@@ -199,9 +199,9 @@ atomic-sleep@^1.0.0:
   integrity sha512-kNOjDqAh7px0XWNI+4QbzoiR/nTkHAWNud2uvnJquD1/x5a7EQZMJT0AczqK0Qn67oY/TTQ1LbUKajZpp3I9tQ==
 
 aws-sdk@^2.610.0:
-  version "2.656.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.656.0.tgz#0d74664ddbf30701073be9f9913ee7266afef3b4"
-  integrity sha512-UzqDvvt6i7gpuzEdK0GT/JOfBJcsCPranzZWdQ9HR4+5E0m5kf5gybZ6OX+UseIAE2/WND6Dv0aHgiI21AKenw==
+  version "2.677.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.677.0.tgz#6106fa93e98e6357304f734a6d6b579303c6a474"
+  integrity sha512-vzQWRh1sgM0HRNmbLXgxnFPySLQrtSNgs9dNQsksGiYrJtf1wYjJSh4UHhekeyMuorQqef3m4AY0vFWsWyZSMg==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
